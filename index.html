@@ -8,17 +8,17 @@
     <title>Survey Form</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200;1,300&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header class="header">
         <h1 class="header__title" id="title">freeCodeCamp Survey Form</h1>
-        <p class="header__description" id="description">Thank you for taking the time to help us improve the platform</p>
+        <p class="header__description" id="description">Thank you for taking the time to help us improve the platform
+        </p>
     </header>
     <main>
-        <div class="container">
             <form class="form" action="" method="post" id="survey-form">
                 <label class="form__label" for="name-label">Name</label>
                 <input class="form__input" type="text" name="name" id="name" placeholder="Enter your name" required>
@@ -36,9 +36,19 @@
                     <option value="other">Other</option>
                 </select>
                 <label class="form__label" for="recommend">Would you recommend freeCodeCamp to a friend?</label>
-                <input class="form__radio"  class="form__radio"type="radio" name="recommend" id="definitely" checked>Definitely
-                <input class="form__radio" type="radio" name="recommend" id="maybe">Maybe
-                <input class="form__radio" type="radio" name="recommend" id="notsure">Not sure
+                <div class="form__radio-container">
+                    <input class="form__radio" class="form__radio" type="radio" name="recommend" id="definitely" checked>
+                    <label class="form__label" for="definitely">Definitely</label>
+                </div>
+                <div class="form__radio-container">
+                    <input class="form__radio" type="radio" name="recommend" id="maybe">
+                    <label class="form__label">Maybe</label>
+                </div>
+                <div class="form__radio-container form__radio-container--ms">
+                    <input class="form__radio" type="radio" name="recommend" id="notsure">
+                    <label class="form__label">Not sure</label>
+                </div>
+                
                 <label class="form__label" for="">What is your favorite feature of freeCodeCamp?</label>
                 <select class="form__select" name="favefeature" id="">
                     <option disabled selected value="">Select an option</option>
@@ -48,22 +58,67 @@
                     <option value="opensource">Open Source</option>
                 </select>
                 <label class="form__label" for="">What would you like to see improved? (Check all that apply)</label>
-                <input class="form__checkbox" type="checkbox" name="" id="">Front-end Projects
-                <input class="form__checkbox" type="checkbox" name="" id="">Back-end Projects
-                <input class="form__checkbox" type="checkbox" name="" id="">Data Visualization
-                <input class="form__checkbox" type="checkbox" name="" id="">Challenges
-                <input class="form__checkbox" type="checkbox" name="" id="">Open Source Community
-                <input class="form__checkbox" type="checkbox" name="" id="">Gitter help rooms
-                <input class="form__checkbox" type="checkbox" name="" id="">Videos
-                <input class="form__checkbox" type="checkbox" name="" id="">City Meetups
-                <input class="form__checkbox" type="checkbox" name="" id="">Wiki
-                <input class="form__checkbox" type="checkbox" name="" id="">Forum
-                <input class="form__checkbox" type="checkbox" name="" id="">Additional Courses
+                <div class="form__checkbox-container">
+                    <input class="form__checkbox" type="checkbox" name="" id="">
+                    <label class="form__label" for="">Front-end Projects</label>
+                  </div>
+                  
+                  <div class="form__checkbox-container">
+                    <input class="form__checkbox" type="checkbox" name="" id="">
+                    <label class="form__label" for="">Back-end Projects</label>
+                  </div>
+                  
+                  <div class="form__checkbox-container">
+                    <input class="form__checkbox" type="checkbox" name="" id="">
+                    <label class="form__label" for="">Data Visualization</label>
+                  </div>
+                  
+                  <div class="form__checkbox-container">
+                    <input class="form__checkbox" type="checkbox" name="" id="">
+                    <label class="form__label" for="">Challenges</label>
+                  </div>
+                  
+                  <div class="form__checkbox-container">
+                    <input class="form__checkbox" type="checkbox" name="" id="">
+                    <label class="form__label" for="">Open Source Community</label>
+                  </div>
+                  
+                  <div class="form__checkbox-container">
+                    <input class="form__checkbox" type="checkbox" name="" id="">
+                    <label class="form__label" for="">Gitter help rooms</label>
+                  </div>
+                  
+                  <div class="form__checkbox-container">
+                    <input class="form__checkbox" type="checkbox" name="" id="">
+                    <label class="form__label" for="">Videos</label>
+                  </div>
+                  
+                  <div class="form__checkbox-container">
+                    <input class="form__checkbox" type="checkbox" name="" id="">
+                    <label class="form__label" for="">City Meetups</label>
+                  </div>
+                  
+                  <div class="form__checkbox-container">
+                    <input class="form__checkbox" type="checkbox" name="" id="">
+                    <label class="form__label" for="">Wiki</label>
+                  </div>
+                  
+                  <div class="form__checkbox-container">
+                    <input class="form__checkbox" type="checkbox" name="" id="">
+                    <label class="form__label" for="">Forum</label>
+                  </div>
+                  
+                  <div class="form__checkbox-container form__checkbox-container--ms">
+                    <input class="form__checkbox" type="checkbox" name="" id="">
+                    <label class="form__label" for="">Additional Courses</label>
+                  </div>
+                  
+
                 <label class="form__label" for="">Any comments or suggestions?</label>
-                <textarea class="form__textarea" name="" id="" cols="30" rows="10" placeholder="Enter your comment here..."></textarea>
+                <textarea class="form__textarea" name="" id="" cols="30" rows="10"
+                    placeholder="Enter your comment here..."></textarea>
                 <input class="form__submit" type="submit" value="Submit" id="submit">
             </form>
-        </div>
     </main>
 </body>
 

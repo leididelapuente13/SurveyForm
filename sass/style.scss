@@ -5,3 +5,128 @@ $color-green: #37af65;
 $border-color: #80bdff;
 
 @use 'reset';
+
+@mixin display-block {
+    display: block;
+}
+
+body {
+    background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    color: #fff;
+    margin: 2rem 1rem;
+    padding: 1rem;
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: center;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+    }
+
+    &__description {
+        color:#e4e4e4;
+        text-align: center;
+        font-style: italic;
+        line-height: 1.2;
+        font-weight: 200;
+        font-size: 1.2rem;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    }
+}
+
+
+
+.form {
+    margin: auto;
+    background-color: $color-darkblue-alpha;
+    color: #fff;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    width: 100%;
+    border-radius: 0.4rem;
+
+    &__label {
+        font-size: 1.2rem;
+        margin-bottom: 0.2rem;
+    }
+
+    &__input {
+        margin-bottom: 1rem;
+        padding: 0.3rem 0.4rem 0.2rem 0.4rem;
+        border-radius: 5px;
+        border: 2px solid #ced4da;
+
+        &:focus {
+            border: 1.5px solid #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+    }
+
+    &__select {
+        @extend .form__input;
+    }
+
+    &__radio-container {
+        &--ms {
+            margin-bottom: 1.3rem;
+        }
+    }
+
+    &__checkbox-container {
+        &--ms {
+            margin-bottom: 1.3rem;
+        }
+    }
+
+    &__checkbox {
+        width: 5%;
+        height: 20px;
+    }
+
+    &__radio {
+        @extend .form__checkbox;
+    }
+
+    &__textarea {
+        @extend .form__input;
+        border-radius: 0;
+        resize: none;
+        height: 8rem;
+        &:focus{
+            border: 1.5px solid #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+    }
+
+    &__submit {
+        color: $color-white;
+        background-color: $color-green;
+        border: none;
+        border-radius: 3px;
+        margin-top: 1rem;
+        padding: 0.6rem;
+
+        &:hover{
+            background-color: seagreen;
+        }
+    }
+}
+
+@media(min-width: 600px){
+    .form{
+        width: 65%;
+        max-width: 68%;
+    }
+}
